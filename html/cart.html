@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Steph Collection</title>
+
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="../images/mainLogo.png" alt="">
+        <ul>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/categories.html">Cartegories</a></li>
+            <li><a class="wishh" href="wishlist.html">❤️ Wishlist</a></li>
+        </ul>
+        <div class="nav_div">
+            <input type="text" placeholder="Search For Item">
+            <a href="cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="cart-container">
+
+        <h1>Shopping Cart</h1>
+
+        <div class="cart-content">
+
+            <div class="cart-items">
+
+                <!-- Products will be inserted here by JavaScript -->
+                
+            </div>
+
+            <div class="cart-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₦0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="checkoutDelivery">₦0</span>
+                </div>
+
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">₦2,000</span>
+                </div>
+
+                <a href="checkout.html" class="checkout-btn">
+                    Proceed to Checkout
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../javascript/cart.js"></script>
+
+</body>
+</html>
+</body>
+</html>

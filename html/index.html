@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <img src="../images/mainLogo.png" alt="">
+            <ul>
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/categories.html">Cartegories</a></li>
+                <li><a class="wishh" href="wishlist.html">❤️ Wishlist</a></li>
+                <li><a class="wishh" href="../html/order-tracker.html">track order</a></li>
+            </ul>
+            <div class="nav_div">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search For Item">
+                    <div id="searchSuggestions"></div>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+        <header>
+            <div class="slider">
+                <div class="slides">
+                    <a href="" class="slide active">
+                        <img src="../images/gadets.png" alt="Clothing">
+                    </a>
+                    <a href="" class="slide">
+                        <img src="../images/plain_tees.png" alt="Clothing">
+                    </a>
+
+                    <a href="" class="slide">
+                        <img src="../images/bags.png" alt="Gadgets">
+                    </a>
+
+                    <a href="" class="slide">
+                        <img src="../images/perfumes.png" alt="Perfumes">
+                    </a>
+
+                    <a href="" class="slide">
+                        <img src="../images/kitchen01.png" alt="Kitchen">
+                    </a>
+                </div>    
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h2 >Browse Categories</h2>
+            <div class="category">
+                <a href="../html/cloth.html" class="category-card">
+                    <i class="fa-solid fa-shirt"></i>
+                    <p>Clothing</p>
+                </a>
+                <a href="../html/electronics.html" class="category-card">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p>Electronics/Gadgets</p>
+                </a>
+                <a href="../html/beauty.html" class="category-card">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <p>Beauty</p>
+                </a>
+                <a href="../html/homeDecor.html" class="category-card">
+                    <i class="fa-solid fa-house"></i>
+                    <p>home & decor</p>
+                </a>
+                <a href="../html/categories.html" class="category-card">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <p>see more</p>
+                </a>
+            </div>
+        </main>
+        <section class="featured">
+
+            <div class="title">
+                <h2>Featured Products</h2>
+                <p>Discover our best-selling products carefully selected for you.</p>
+            </div>
+
+            <!-- <div class="filter-buttons">
+
+                <button class="active">All</button>
+                <button>Clothing</button>
+                <button>Electronics</button>
+                <button>Beauty</button>
+                <button>Kitchen</button>
+
+            </div> -->
+
+            <div class="product-container" id="productGrid">
+                <div class="product-card">
+                    <img src="../images/headset.jpg" alt="">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Headset</h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                        <span>(24)</span>
+
+                    </div>
+
+                    <p class="price">₦10,000</p>
+
+                    <button class="cart-btn" data-name="headset" data-price="12000" data-image="../images/headset.jpg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="../images/backpack.jpeg" alt="">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Backpack</h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                        <span>(24)</span>
+
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="backpack" data-price="12333" data-image="../images/backpack.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="../images/jewelry .jpeg" alt="">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>jewelry</h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                        <span>(24)</span>
+
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="jewelry" data-price="23333" data-image="../images/jewelry .jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="../images/stanley-cup.jpeg" alt="">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>stanley-cup</h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                        <span>(24)</span>
+
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="stanley cup" data-price="34444" data-image="../images/stanley-cup.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <section class="why-shop">
+
+            <div class="section-title">
+                <h2>Why Shop With Us</h2>
+                <p>We make shopping simple, affordable, and reliable.</p>
+            </div>
+
+            <div class="why-container">
+
+                <div class="why-card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery to your location.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3>Quality Products</h3>
+                    <p>Carefully selected products at the best prices.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fa-solid fa-lock"></i>
+                    <h3>Secure Ordering</h3>
+                    <p>Place your orders easily through WhatsApp.</p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>Customer Support</h3>
+                    <p>Get instant assistance whenever you need help.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <footer>
+
+            <div class="footer-container">
+                <div class="admin-access">
+                    <a href="admin-login.html">
+                        Admin Login
+                    </a>
+                </div>
+
+                <div class="footer-box">
+
+                    <img src="../images/mainLogo.png" alt="Steph Collection">
+
+                    <p>
+                        Your one-stop shop for fashion, gadgets,
+                        beauty products, kitchen essentials,
+                        and everyday lifestyle items.
+                    </p>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Featured</a>
+                    <a href="#">Contact</a>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Categories</h3>
+
+                    <a href="#">Clothing</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Beauty</a>
+                    <a href="#">Kitchen</a>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Contact</h3>
+
+                    <p><i class="fa-solid fa-phone"></i> +234 801 234 5678</p>
+
+                    <p><i class="fa-solid fa-envelope"></i> stephcollection@gmail.com</p>
+
+                    <p><i class="fa-solid fa-location-dot"></i> Enugu, Nigeria</p>
+
+                </div>
+
+            </div>
+
+            <div class="socials">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+
+            <div class="copyright">
+
+                <p>© 2026 Steph Collection. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+    </section>
+    <script src="../javascript/index.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/whislist.js"></script>
+    <script src="../javascript/product-links.js"></script>
+    <script src="../javascript/store-products.js"></script>
+</body>
+</html>

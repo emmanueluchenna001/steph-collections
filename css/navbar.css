@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    font-family: "poppins", sans-serif;
+    background-color: #f9f9f9;
+}
+nav {
+    width: 100%;
+    height: 75px;
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+nav img {
+    width: 90px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* NAV LINKS */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a86422;
+}
+
+/* RIGHT SIDE */
+.nav_div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* SEARCH */
+.nav_div input {
+    width: 280px;
+    height: 42px;
+
+    border: 1px solid #ddd;
+    border-radius: 25px;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    outline: none;
+
+    background: #fafafa;
+
+    transition: 0.3s ease;
+}
+
+.nav_div input:focus {
+    border-color: #a86422;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(168, 100, 34, 0.1);
+}
+
+/* CART */
+.cart-link {
+    position: relative;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3f3f3;
+    color: #a86422;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.cart-link:hover {
+    background: #a86422;
+    color: white;
+}
+
+.cart-link i {
+    font-size: 18px;
+}
+
+/* CART NUMBER */
+#cart-count {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px;
+
+    background: #a86422;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+#searchSuggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+
+.search-suggestion {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.search-suggestion:hover {
+    background: #f5f5f5;
+}
+
+
+.search-suggestion small {
+    color: #888;
+}
+
+
+.no-result {
+    padding: 12px 15px;
+    color: #888;
+}
+.wishlist.active {
+    color: white;
+    background: brown;
+}
+.wishh{
+    text-decoration: none;
+    color: black;
+}
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        height: auto;
+        min-height: 75px;
+        padding: 10px 20px;
+
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav img {
+        width: 75px;
+        height: 55px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .nav_div {
+        width: 100%;
+        order: 3;
+
+        display: flex;
+        gap: 10px;
+    }
+
+    .search-container {
+        flex: 1;
+        width: auto;
+    }
+
+    .nav_div input {
+        width: 100%;
+    }
+
+}
+@media (max-width: 600px) {
+
+    nav {
+        padding: 8px 15px;
+    }
+
+    nav img {
+        width: 65px;
+        height: 50px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav ul li:nth-child(3) a {
+        font-size: 0;
+    }
+
+    nav ul li:nth-child(3) a::before {
+        content: "❤️";
+        font-size: 18px;
+    }
+
+    .nav_div {
+        gap: 8px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .nav_div input {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .cart-link {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Track Order | Steph Collection</title>
+
+    <link rel="stylesheet"
+        href="../css/order-tracker.css">
+
+</head>
+
+<body>
+
+    <section class="tracker-container">
+
+        <div class="tracker-card">
+
+            <h1>Track Your Order</h1>
+
+            <p>
+                Enter your order ID and phone number
+                to check your order status.
+            </p>
+
+
+            <form id="trackerForm">
+
+                <div class="input-box">
+
+                    <label for="orderId">
+                        Order ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="orderId"
+                        placeholder="Enter your order ID"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label for="trackerPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="trackerPhone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Track Order
+                </button>
+
+            </form>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div
+                id="trackerError"
+                class="tracker-error">
+
+            </div>
+
+
+            <!-- ORDER RESULT -->
+
+            <div
+                id="orderResult"
+                class="order-result">
+
+                <h2>
+                    Order Found
+                </h2>
+
+                <p>
+                    Order ID:
+                    <strong id="resultOrderId"></strong>
+                </p>
+
+                <p>
+                    Customer:
+                    <strong id="resultCustomer"></strong>
+                </p>
+
+                <p>
+                    Total:
+                    <strong id="resultTotal"></strong>
+                </p>
+
+
+                <!-- STATUS -->
+
+                <div class="order-status">
+
+                    <h3>
+                        Order Status
+                    </h3>
+
+
+                    <div class="status-tracker">
+
+                        <div
+                            class="status-step"
+                            id="statusPending">
+
+                            <div class="status-circle">
+                                1
+                            </div>
+
+                            <span>
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="status-line">
+                        </div>
+
+
+                        <div
+                            class="status-step"
+                            id="statusProcessing">
+
+                            <div class="status-circle">
+                                2
+                            </div>
+
+                            <span>
+                                Processing
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="status-line">
+                        </div>
+
+
+                        <div
+                            class="status-step"
+                            id="statusDelivered">
+
+                            <div class="status-circle">
+                                3
+                            </div>
+
+                            <span>
+                                Delivered
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script
+        type="module"
+        src="../javascript/order-tracker.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cloth.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <img src="../images/mainLogo.png" alt="">
+            <ul>
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/categories.html">Cartegories</a></li>
+                <li><a class="wishh" href="wishlist.html">❤️ Wishlist</a></li>
+            </ul>
+            <div class="nav_div">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search For Item">
+                    <div id="searchSuggestions"></div>
+                </div>
+                <a href="cart.html" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+        <header class="category-hero">
+
+            <div class="hero-overlay">
+
+                <h1>Clothing Collection</h1>
+
+                <p>
+                    Discover premium fashion for men and women.
+                    Shop the latest styles at affordable prices.
+                </p>
+
+                <a href="#products" class="shop-btn">
+                    Shop Now
+                </a>
+
+            </div>
+        </header>
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <span>></span>
+
+            <a href="categories.html">Categories</a>
+
+            <span>></span>
+
+            <span>Clothing</span>
+
+        </div>
+        <section class="products" id="products">
+
+            <div class="products-header">
+
+                <h2>Clothing Products</h2>
+
+                <select id="sortProduct">
+                    <option value="default">Sort By</option>
+                    <option value="newest">Newest</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="selling">Best Selling</option>
+                </select>
+
+            </div>
+
+            <div class="product-grid" id="productGrid">
+
+                <!-- Product Card 1 -->
+                <div class="product-card">
+
+                    <img src="../images/cloth1.jpeg" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Shirt</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="shirt" data-price="12000" data-image="../images/cloth1.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+                <div class="product-card">
+
+                    <img src="../images/cloth2.jpeg" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>3 in 1 singlet</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="3 in 1 singlet" data-price="12000" data-image="../images/cloth2.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+                <div class="product-card">
+
+                    <img src="../images/cloth3.jpeg" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Ladies trouser</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="Ladies trouse" data-price="12000" data-image="../images/cloth3.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+                <div class="product-card">
+
+                    <img src="../images/cloth4.jpeg" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>matching cloth</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="matching cloth" data-price="12000" data-image="../images/cloth4.jpeg">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+                <div class="product-card">
+
+                    <img src="../images/plain_tees.png" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Men's Polo Shirt</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="Men's Polo Shirt" data-price="12000" data-image="../images/plain_tees.png">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+                <div class="product-card">
+
+                    <img src="../images/plain_tees.png" alt="Polo Shirt">
+
+                    <span class="badge">New</span>
+
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <h3>Men's Polo Shirt</h3>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(24)</span>
+                    </div>
+
+                    <p class="price">₦12,000</p>
+
+                    <button class="cart-btn" data-name="Men's Polo Shirt" data-price="12000" data-image="../images/plain_tees.png">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+        <footer>
+
+            <div class="footer-container">
+
+                <div class="footer-box">
+
+                    <img src="../images/mainLogo.png" alt="Steph Collection">
+
+                    <p>
+                        Your one-stop shop for fashion, gadgets,
+                        beauty products, kitchen essentials,
+                        and everyday lifestyle items.
+                    </p>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Featured</a>
+                    <a href="#">Contact</a>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Categories</h3>
+
+                    <a href="#">Clothing</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Beauty</a>
+                    <a href="#">Kitchen</a>
+
+                </div>
+
+                <div class="footer-box">
+
+                    <h3>Contact</h3>
+
+                    <p><i class="fa-solid fa-phone"></i> +234 801 234 5678</p>
+
+                    <p><i class="fa-solid fa-envelope"></i> stephcollection@gmail.com</p>
+
+                    <p><i class="fa-solid fa-location-dot"></i> Enugu, Nigeria</p>
+
+                </div>
+
+            </div>
+
+            <div class="socials">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+
+            <div class="copyright">
+
+                <p>© 2026 Steph Collection. All Rights Reserved.</p>
+
+            </div>
+
+        </footer>
+    </section>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/index.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/sort.js"></script>
+    <script src="../javascript/whislist.js"></script>
+    <script src="../javascript/product-links.js"></script>
+    <script src="../javascript/store-products.js"></script>
+</body>
+</html>

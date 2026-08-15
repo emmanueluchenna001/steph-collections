@@ -1,0 +1,255 @@
+*{
+    user-select: none;
+}
+.category-hero{
+    width: 80%;
+    height: 450px;
+    margin: 100px auto 40px;
+    border-radius: 20px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("../images/beauty-banner.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero-overlay{
+    text-align: center;
+    color: white;
+    width: 60%;
+}
+
+.hero-overlay h1{
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero-overlay p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.shop-btn{
+    display: inline-block;
+    padding: 15px 35px;
+    background: #8b5a2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.shop-btn:hover{
+    background: #6f431a;
+}
+.breadcrumb{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+    color: #8b5a2b;
+    font-weight: 500;
+}
+
+.breadcrumb span{
+    color: #666;
+    margin: 0 8px;
+}
+.products{
+    width: 80%;
+    margin: 60px auto;
+}
+
+.products-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.products-header h2{
+    font-size: 32px;
+}
+
+.products-header select{
+    padding: 10px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+.product-card{
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    position: relative;
+    transition: .3s;
+    padding: 15px;
+}
+
+.product-card:hover{
+    transform: translateY(-8px);
+}
+.product-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.cart-btn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #8B5E3C; /* brown */
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: .3s;
+}
+
+.cart-btn:hover{
+    background: #6b4529;
+    transform: translateY(-2px);
+}
+
+.cart-btn i{
+    font-size: 16px;
+}
+.product-card h3{
+    margin: 12px 0 8px;
+    font-size: 22px;
+}
+
+.rating{
+    color: #f7b500;
+    margin-bottom: 8px;
+}
+
+.rating span{
+    color: #555;
+}
+
+.price{
+    font-size: 22px;
+    font-weight: bold;
+    color: #8B5E3C;
+    margin-bottom: 15px;
+}
+/* =========================
+   RESPONSIVE PRODUCTS
+========================= */
+
+@media (max-width: 900px) {
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card {
+        padding: 12px;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .product-card h3 {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .cart-btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .category-hero{
+        height: 400px;
+        width: 95%;
+        margin: 30px auto;
+    }
+
+
+}
+
+@media (max-width: 450px) {
+
+    .products {
+        width: 100%;
+        padding: 25px 8px;
+        margin: 0;
+    }
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .product-card .price {
+        font-size: 14px;
+    }
+
+    .cart-btn {
+        width: 100%;
+        padding: 8px 3px;
+        font-size: 11px;
+    }
+}

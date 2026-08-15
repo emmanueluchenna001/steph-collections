@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Steph Collection - Admin</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+                <img src="../images/mainLogo.png" alt="Steph Collection">
+            </div>
+
+            <ul class="admin-menu">
+
+                <li class="active">
+                    <a href="admin.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-products.html">
+                        <i class="fa-solid fa-box"></i>
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#orders-section" id="orders-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-categories.html">
+                        <i class="fa-solid fa-layer-group"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-customers.html">
+                        <i class="fa-solid fa-users"></i>
+                        Customers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+            <header class="admin-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Admin.</p>
+                </div>
+
+                <div class="admin-profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Admin</span>
+                    <button id="logoutBtn">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- STAT CARDS -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Total Products</p>
+                        <h2>0</h2>
+                    </div>
+
+                    <i class="fa-solid fa-box"></i>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Total Orders</p>
+                        <h2>0</h2>
+                    </div>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Pending Orders</p>
+                        <h2>0</h2>
+                    </div>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div>
+                        <p>Total Sales</p>
+                        <h2>₦0</h2>
+                    </div>
+
+                    <i class="fa-solid fa-naira-sign"></i>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT ORDERS -->
+
+            <!-- RECENT ORDERS -->
+
+            <section class="recent-orders" id="orders-section">
+
+                <div class="section-title">
+
+                    <h2>Recent Orders</h2>
+
+                    <a href="#orders-section">View All</a>
+
+                </div>
+
+                <div class="orders-table-container">
+
+                    <table class="orders-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>order id</th>
+                                <th>Customer</th>
+                                <th>Phone</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>subtotal</th>
+                                <th>Delivery</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="ordersTableBody">
+
+                            <!-- Orders will be added here by JavaScript -->
+
+                        </tbody>
+
+                    </table>
+
+                    <div class="empty-orders" id="emptyOrders">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <p>No orders yet.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script type="module" src="../javascript/admin.js"></script>
+
+</body>
+
+</html>

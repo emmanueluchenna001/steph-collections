@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <nav>
+        <img src="../images/mainLogo.png" alt="">
+        <ul>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="../html/categories.html">Cartegories</a></li>
+            <li><a class="wishh" href="wishlist.html">❤️ Wishlist</a></li>
+        </ul>
+        <div class="nav_div">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search For Item">
+                <div id="searchSuggestions"></div>
+            </div>
+            <a href="cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+            
+        </div>
+    </nav>
+    <section class="wishlist-section">
+
+        <h1>My Wishlist ❤️</h1>
+
+        <div id="wishlist-container" class="wishlist-grid">
+
+        </div>
+
+    </section>
+
+
+    <script src="../javascript/wishlist-page.js"></script>
+    <script src="../javascript/cart.js"></script>
+</body>
+</html>

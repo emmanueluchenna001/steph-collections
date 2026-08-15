@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Steph Collection - Settings</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Admin CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+
+                <img
+                    src="../images/mainLogo.png"
+                    alt="Steph Collection"
+                >
+
+            </div>
+
+
+            <ul class="admin-menu">
+
+                <li>
+
+                    <a href="admin.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="admin-products.html">
+
+                        <i class="fa-solid fa-box"></i>
+
+                        Products
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="admin.html#orders-section">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Orders
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="#">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        Categories
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="admin-customers.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Customers
+
+                    </a>
+
+                </li>
+
+
+                <li class="active">
+
+                    <a href="admin-settings.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+
+            <!-- HEADER -->
+
+            <header class="admin-header">
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your store information.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Admin</span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- SETTINGS -->
+
+            <section class="settings-section">
+
+                <div class="settings-card">
+
+
+                    <div class="settings-title">
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <div>
+
+                            <h2>Store Information</h2>
+
+                            <p>
+                                Update your store details.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <form id="settingsForm">
+
+
+                        <!-- STORE NAME -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeName">
+                                Store Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="storeName"
+                                placeholder="Steph Collection"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- PHONE + WHATSAPP -->
+
+                        <div class="settings-form-row">
+
+
+                            <div class="settings-form-group">
+
+                                <label for="storePhone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="storePhone"
+                                    placeholder="08012345678"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="settings-form-group">
+
+                                <label for="whatsappNumber">
+                                    WhatsApp Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="whatsappNumber"
+                                    placeholder="2348012345678"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DELIVERY + LOCATION -->
+
+                        <div class="settings-form-row">
+
+
+                            <div class="settings-form-group">
+
+                                <label for="deliveryFee">
+                                    Delivery Fee (₦)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="deliveryFee"
+                                    placeholder="2000"
+                                    min="0"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="settings-form-group">
+
+                                <label for="storeLocation">
+                                    Store Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="storeLocation"
+                                    placeholder="Enugu, Nigeria"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="settings-form-group">
+
+                            <label for="storeEmail">
+                                Store Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="storeEmail"
+                                placeholder="stephcollection@gmail.com"
+                            >
+
+                        </div>
+
+
+
+                        <!-- SAVE BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="save-settings-btn"
+                        >
+
+                            <i class="fa-solid fa-save"></i>
+
+                            Save Settings
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../javascript/admin-settings.js"></script>
+
+</body>
+
+</html>

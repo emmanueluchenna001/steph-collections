@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - Steph Collection</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/admin-products.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+                <img src="../images/mainLogo.png" alt="Steph Collection">
+            </div>
+
+            <ul class="admin-menu">
+
+                <li>
+                    <a href="admin.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="admin-products.html">
+                        <i class="fa-solid fa-box"></i>
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin.html#orders-section">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-categories.html">
+                        <i class="fa-solid fa-layer-group"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-customers.html">
+                        <i class="fa-solid fa-users"></i>
+                        Customers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="admin-main">
+
+            <header class="admin-header">
+
+                <div>
+                    <h1>Products</h1>
+                    <p>Manage your store products.</p>
+                </div>
+
+                <button class="add-product-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Product
+                </button>
+
+            </header>
+
+
+            <!-- PRODUCT CONTROLS -->
+
+            <div class="product-controls">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search products..."
+                >
+
+                <select id="categoryFilter">
+
+                    <option value="all">All Categories</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="home">Home & Decor</option>
+                    <option value="others">Others</option>
+
+                </select>
+
+            </div>
+            <!-- ADD PRODUCT FORM -->
+
+            <div class="product-form-container" id="productFormContainer">
+
+                <div class="product-form">
+
+                    <div class="form-header">
+
+                        <h2>Add New Product</h2>
+
+                        <button type="button" id="closeProductForm">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </div>
+
+
+                    <form id="productForm">
+
+                        <div class="form-group">
+
+                            <label for="productName">
+                                Product Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="productName"
+                                placeholder="Enter product name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="productPrice">
+                                    Price
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="productPrice"
+                                    placeholder="Enter price"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="productCategory">
+                                    Category
+                                </label>
+
+                                <select id="productCategory" required>
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="clothing">
+                                        Clothing
+                                    </option>
+
+                                    <option value="electronics">
+                                        Electronics
+                                    </option>
+
+                                    <option value="beauty">
+                                        Beauty
+                                    </option>
+
+                                    <option value="home">
+                                        Home & Decor
+                                    </option>
+
+                                    <option value="others">
+                                        Others
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="productImage">
+                                Product Image
+                            </label>
+
+                            <input
+                                type="file"
+                                id="productImage"
+                                accept="image/*"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="productDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="productDescription"
+                                rows="4"
+                                placeholder="Enter product description"
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="save-product-btn">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Save Product
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <section class="admin-products">
+
+                <div class="products-table">
+
+                    <div class="table-header">
+
+                        <span>Product</span>
+                        <span>Category</span>
+                        <span>Price</span>
+                        <span>Actions</span>
+
+                    </div>
+
+
+                    <!-- Products will be added here with JavaScript -->
+
+                    <div id="adminProductList">
+
+                        <div class="empty-products">
+
+                            <i class="fa-solid fa-box-open"></i>
+
+                            <p>No products added yet.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../javascript/admin-products.js"></script>
+
+</body>
+
+</html>

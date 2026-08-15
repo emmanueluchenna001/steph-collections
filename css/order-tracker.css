@@ -1,0 +1,286 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.tracker-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.tracker-card {
+    width: 100%;
+    max-width: 550px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tracker-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tracker-card > p {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #a66a2c;
+    box-shadow: 0 0 0 3px rgba(166, 106, 44, 0.1);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+#trackerForm button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #a66a2c;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#trackerForm button:hover {
+    background: #8b5e3c;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.tracker-error {
+    display: none;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffecec;
+    color: #d93025;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ORDER RESULT
+========================= */
+
+.order-result {
+    display: none;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.order-result.show {
+    display: block;
+}
+
+.order-result h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.order-result > p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.order-result strong {
+    color: #8b5e3c;
+}
+
+
+/* =========================
+   ORDER STATUS
+========================= */
+
+.order-status {
+    margin-top: 30px;
+}
+
+.order-status h3 {
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   STATUS TRACKER
+========================= */
+
+.status-tracker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 75px;
+}
+
+.status-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.status-step span {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.status-line {
+    flex: 1;
+    height: 3px;
+    background: #ddd;
+    margin: 0 5px;
+}
+
+
+/* =========================
+   ACTIVE STATUS
+========================= */
+
+.status-step.active .status-circle {
+    background: #a66a2c;
+    color: white;
+}
+
+.status-step.active span {
+    color: #8b5e3c;
+    font-weight: 600;
+}
+
+.status-line.active {
+    background: #a66a2c;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .tracker-container {
+        padding: 20px 15px;
+    }
+
+    .tracker-card {
+        padding: 25px 20px;
+    }
+
+    .tracker-card h1 {
+        font-size: 24px;
+    }
+
+    .status-step {
+        min-width: 60px;
+    }
+
+    .status-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .status-step span {
+        font-size: 11px;
+    }
+
+}
+/* =========================
+   COMPLETED STATUS
+========================= */
+
+.status-step.completed .status-circle {
+    background: #8B5E3C;
+    color: white;
+    border-color: #8B5E3C;
+}
+
+.status-step.completed span {
+    color: #8B5E3C;
+    font-weight: 600;
+}
+
+.status-step.completed + .status-line {
+    background: #8B5E3C;
+}
